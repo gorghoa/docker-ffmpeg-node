@@ -1,7 +1,7 @@
 FROM node:5
 
 RUN apt-get update && \
-    apt-get install -y ffmpeg curl vim
+    apt-get install -y libav-tools curl vim
 
 RUN node -v && \
     npm -v && \
