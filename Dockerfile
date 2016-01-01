@@ -1,9 +1,8 @@
-FROM base/archlinux:latest
+FROM node:5
 
-
-RUN yes | pacman -Sy --noconfirm nodejs ffmpeg curl vim
+RUN apt-get update && \
+    apt-get install -y ffmpeg curl vim
 
 RUN node -v && \
     npm -v && \
-    npm install -g less gulp bower  && \
-    yes | pacman -Scc
+    npm install -g less gulp bower 
